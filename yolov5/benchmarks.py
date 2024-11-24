@@ -50,7 +50,7 @@ from val import run as val_det
 
 
 def run(
-    weights=ROOT / "yolov5s.pt",  # weights path
+    weights=ROOT / "best.pt",  # weights path
     imgsz=640,  # inference size (pixels)
     batch_size=1,  # batch size
     data=ROOT / "data/coco128.yaml",  # dataset.yaml path
@@ -150,7 +150,7 @@ def run(
 
 
 def test(
-    weights=ROOT / "yolov5s.pt",  # weights path
+    weights=ROOT / "best.pt",  # weights path
     imgsz=640,  # inference size (pixels)
     batch_size=1,  # batch size
     data=ROOT / "data/coco128.yaml",  # dataset.yaml path
