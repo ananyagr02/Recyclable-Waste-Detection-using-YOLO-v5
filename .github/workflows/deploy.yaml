@@ -1,0 +1,38 @@
+name: Deploy to Google Cloud Run
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow on push to the 'main' branch
+
+jobs:
+  deploy:
+    name: Deploy to Google Cloud Run
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Google Cloud SDK
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}  # Your Google Cloud Project ID
+          credentials_json: ${{ secrets.GCP_CREDENTIALS_JSON }}  # Service Account credentials
+
+      # Step 3: Set up Docker and build the container image
+      - name: Build Docker image
+        run: |
+          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/my-ml-app:$GITHUB_SHA .
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/my-ml-app:$GITHUB_SHA
+
+      # Step 4: Deploy the Docker image to Google Cloud Run
+      - name: Deploy to Google Cloud Run
+        run: |
+          gcloud run deploy my-ml-app \
+            --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/my-ml-app:$GITHUB_SHA \
+            --platform managed \
+            --region us-central1 \
+            --allow-unauthenticated
