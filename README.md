@@ -112,6 +112,6 @@ python app.py
 
 ## 🌍 Why It Matters
 
-> InBin W aims to revolutionize waste segregation by automating the detection and classification of recyclables, reducing contamination, cutting costs, and promoting sustainable waste disposal.
+> InBin aims to revolutionize waste segregation by automating the detection and classification of recyclables, reducing contamination, cutting costs, and promoting sustainable waste disposal.
 
 ---
