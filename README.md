@@ -29,9 +29,9 @@
 
 ## 📈 Overall model evaluation metrics
 
-- **Precision**: 0.713
-- **Recall**: 0.689  
-- **F1 Score**: 0.790
+- **Precision**: 0.788
+- **Recall**: 0.735 
+- **F1 Score**: 0.760
 - **Accuracy**: 0.790
 - Trained using **YOLOv5s** variant over 50 epochs  
 - Tracked with **TensorBoard**
