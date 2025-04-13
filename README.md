@@ -8,8 +8,47 @@
 
 ---
 
-## 📦 Dataset: `FINAL_WASTE (CUSTOMIZED)`
+## 🚀 Features
 
+- 🧠 YOLOv5-based detection for real-time object classification.
+- 📂 Trained on a rich, diverse dataset with 9 recyclable waste classes.
+- 📊 Model evaluation using **Precision**, **Recall**, and **F1 Score**.
+- 🔍 Continuous model refinement with visual insights via **TensorBoard** and **Seaborn**.
+- 🌐 Lightweight **Flask API** for easy deployment and integration.
+- 📦 Fully containerized with **Docker** for cross-platform use.
+
+---
+
+## 📈 Model Metrics
+
+- **Overall Precision**: 0.813
+- **Recall**: 0.767  
+- **F1 Score**: 0.790
+- **Accuracy**: 0.790
+- Trained using **YOLOv5s** variant over 50 epochs  
+- Tracked with **TensorBoard**
+
+---
+
+
+## ⚙️ Tech Stack
+
+| Tool/Library      | Purpose                                 |
+|-------------------|------------------------------------------|
+| **YOLOv5**         | Object detection framework               |
+| **Python**         | Core programming                        |
+| **PyTorch**        | Deep learning engine                     |
+| **NumPy**          | Matrix and array operations              |
+| **TensorBoard**    | Training monitoring                      |
+| **Seaborn**        | Data visualization                       |
+| **Flask**          | Backend REST API                         |
+| **Docker**         | Deployment and portability               |
+
+
+---
+## 📦 Dataset Links: 
+  - 📁 [Dataset Folder](https://drive.google.com/drive/u/2/folders/1ysx3bHxQFpELPFGDEGJUnYwqdgQO5_5K)  
+  - 📦 [Dataset ZIP File](https://drive.google.com/file/d/1cYCv07SNT-LkI839StJcXDhFQuqGVOJP/view?usp=sharing)
 - **Name**: FINAL_WASTE  
 - **Size**: 8,000+ manually labeled images  
 - **Categories**:
@@ -38,47 +77,10 @@
 - **Purpose**:  
   This dataset is curated for high-performance waste detection, featuring diverse environmental conditions and precise annotations, making it ideal for research and industrial use in waste management.
 
-- **Links**:
-  - 📁 [Dataset Folder](https://drive.google.com/drive/u/2/folders/1ysx3bHxQFpELPFGDEGJUnYwqdgQO5_5K)  
-  - 📦 [Dataset ZIP File](https://drive.google.com/file/d/1cYCv07SNT-LkI839StJcXDhFQuqGVOJP/view?usp=sharing)
-
 ---
 
-## 🚀 Features
 
-- 🧠 YOLOv5-based detection for real-time object classification.
-- 📂 Trained on a rich, diverse dataset with 9 recyclable waste classes.
-- 📊 Model evaluation using **Precision**, **Recall**, and **F1 Score**.
-- 🔍 Continuous model refinement with visual insights via **TensorBoard** and **Seaborn**.
-- 🌐 Lightweight **Flask API** for easy deployment and integration.
-- 📦 Fully containerized with **Docker** for cross-platform use.
 
----
-
-## ⚙️ Tech Stack
-
-| Tool/Library      | Purpose                                 |
-|-------------------|------------------------------------------|
-| **YOLOv5**         | Object detection framework               |
-| **Python**         | Core programming                        |
-| **PyTorch**        | Deep learning engine                     |
-| **NumPy**          | Matrix and array operations              |
-| **TensorBoard**    | Training monitoring                      |
-| **Seaborn**        | Data visualization                       |
-| **Flask**          | Backend REST API                         |
-| **Docker**         | Deployment and portability               |
-
----
-
-## 📈 Model Metrics
-
-- **Precision**: ~0.89  
-- **Recall**: ~0.86  
-- **F1 Score**: ~0.87  
-- Trained using YOLOv5m variant over ~25 epochs  
-- Tracked with **TensorBoard**
-
----
 
 ## 🌐 API Usage
 
@@ -117,13 +119,6 @@ git clone https://github.com/yourusername/inbin-w.git
 cd inbin-w
 pip install -r requirements.txt
 python app.py
-```
-
-### 🐳 Run with Docker
-
-```bash
-docker build -t inbin-w .
-docker run -p 5000:5000 inbin-w
 ```
 
 ---
