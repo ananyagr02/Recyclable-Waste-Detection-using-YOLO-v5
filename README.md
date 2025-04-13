@@ -28,10 +28,10 @@
 
 ---
 
-## 📈 Model Metrics
+## 📈 Overall model evaluation metrics
 
-- **Overall Precision**: 0.813
-- **Recall**: 0.767  
+- **Precision**: 0.713
+- **Recall**: 0.689  
 - **F1 Score**: 0.790
 - **Accuracy**: 0.790
 - Trained using **YOLOv5s** variant over 50 epochs  
@@ -44,9 +44,9 @@
 
 | Tool/Library      | Purpose                                 |
 |-------------------|------------------------------------------|
-| **YOLOv5**         | Object detection framework               |
+| **YOLOv5s**         | Object detection Model               |
 | **Python**         | Core programming                        |
-| **PyTorch**        | Deep learning engine                     |
+| **PyTorch**        | Deep learning framework                     |
 | **NumPy**          | Matrix and array operations              |
 | **TensorBoard**    | Training monitoring                      |
 | **Seaborn**        | Data visualization                       |
@@ -56,7 +56,7 @@
 
 ---
 ## 📦 Dataset Links: 
-  - 📁 [Dataset Folder](https://drive.google.com/drive/u/2/folders/1ysx3bHxQFpELPFGDEGJUnYwqdgQO5_5K)  
+  - 📁 [Dataset Folder](https://drive.google.com/drive/folders/1ysx3bHxQFpELPFGDEGJUnYwqdgQO5_5K?usp=drive_link)  
   - 📦 [Dataset ZIP File](https://drive.google.com/file/d/1cYCv07SNT-LkI839StJcXDhFQuqGVOJP/view?usp=sharing)
 - **Name**: FINAL_WASTE  
 - **Size**: 8,000+ manually labeled images  
@@ -88,44 +88,13 @@
 
 ---
 
-
-
-
-## 🌐 API Usage
-
-**POST** `/predict`  
-Send an image (base64 or form-data) for classification.
-
-**Request:**
-```json
-{
-  "image": "base64_encoded_image"
-}
-```
-
-**Response:**
-```json
-{
-  "predictions": [
-    {
-      "label": "Plastic",
-      "confidence": 0.92,
-      "bbox": [x, y, width, height]
-    },
-    ...
-  ]
-}
-```
-
----
-
 ## 🚢 Running the Project
 
 ### 🧪 Run Locally
 
 ```bash
-git clone https://github.com/yourusername/inbin-w.git
-cd inbin-w
+git clone https://github.com/ananyagr02/Recyclable-Waste-Detection-using-YOLO-v5.git
+cd Recyclable-Waste-Detection-using-YOLO-v5
 pip install -r requirements.txt
 python app.py
 ```
