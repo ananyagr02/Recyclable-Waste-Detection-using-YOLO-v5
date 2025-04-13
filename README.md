@@ -7,7 +7,7 @@
 **InBin** is a smart waste detection system that uses deep learning to classify and identify recyclable waste across **9 categories**. Built with **YOLOv5**, it enables high-speed, accurate detection and is optimized for real-world deployment through a **Flask API** and **Docker** container.
 
 ---
-
+## Demo-video https://drive.google.com/file/d/1xOVeZ3dTKO0wg4G4oDw-h__hwUBH0PZO/view?usp=sharing
 ## 🚀 Features
 
 - 🧠 YOLOv5-based detection for real-time object classification.
