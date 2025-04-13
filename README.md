@@ -1,5 +1,4 @@
-# ♻️ InBin — Recyclable Waste Detection System
-
+## ♻️ InBin — Recyclable Waste Detection System
 ---
 
 ## 🔍 Overview
