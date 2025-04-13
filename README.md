@@ -11,7 +11,16 @@
 ## 🚀 Features
 
 - 🧠 YOLOv5-based detection for real-time object classification.
-- 📂 Trained on a rich, diverse dataset with 9 recyclable waste classes.
+- 📂 Trained on a rich, diverse dataset with 9 recyclable waste classes including
+  Battery
+  Cloth
+  Metal
+  E-Waste
+  Lightbulb
+  Paper
+  Plastic
+  Glass
+  Organic
 - 📊 Model evaluation using **Precision**, **Recall**, and **F1 Score**.
 - 🔍 Continuous model refinement with visual insights via **TensorBoard** and **Seaborn**.
 - 🌐 Lightweight **Flask API** for easy deployment and integration.
