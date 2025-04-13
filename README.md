@@ -1,9 +1,145 @@
-# End-to-End-Waste-Detection-using-YOLO-v5
-## Workflows -> update in following order
-1. constants
-2. entity
-3. components
-4. pipelines
-5. app.py
-# ECR repo url 
-# 528757801786.dkr.ecr.us-east-1.amazonaws.com/waste_detection
+# ♻️ InBin — Recyclable Waste Detection System
+
+---
+
+## 🔍 Overview
+
+**InBin** is a smart waste detection system that uses deep learning to classify and identify recyclable waste across **9 categories**. Built with **YOLOv5**, it enables high-speed, accurate detection and is optimized for real-world deployment through a **Flask API** and **Docker** container.
+
+---
+
+## 📦 Dataset: `FINAL_WASTE (CUSTOMIZED)`
+
+- **Name**: FINAL_WASTE  
+- **Size**: 8,000+ manually labeled images  
+- **Categories**:
+  1. Battery  
+  2. Clothes  
+  3. Metal  
+  4. E-Waste  
+  5. Lightbulb  
+  6. Paper  
+  7. Plastic  
+  8. Glass  
+  9. Organic  
+
+- **Structure**:
+  ```
+  FINAL_WASTE/
+  ├── Train/
+  │   ├── images/
+  │   └── labels/
+  ├── Valid/
+  │   ├── images/
+  │   └── labels/
+  └── data.yaml
+  ```
+
+- **Purpose**:  
+  This dataset is curated for high-performance waste detection, featuring diverse environmental conditions and precise annotations, making it ideal for research and industrial use in waste management.
+
+- **Links**:
+  - 📁 [Dataset Folder](https://drive.google.com/drive/u/2/folders/1ysx3bHxQFpELPFGDEGJUnYwqdgQO5_5K)  
+  - 📦 [Dataset ZIP File](https://drive.google.com/file/d/1cYCv07SNT-LkI839StJcXDhFQuqGVOJP/view?usp=sharing)
+
+---
+
+## 🚀 Features
+
+- 🧠 YOLOv5-based detection for real-time object classification.
+- 📂 Trained on a rich, diverse dataset with 9 recyclable waste classes.
+- 📊 Model evaluation using **Precision**, **Recall**, and **F1 Score**.
+- 🔍 Continuous model refinement with visual insights via **TensorBoard** and **Seaborn**.
+- 🌐 Lightweight **Flask API** for easy deployment and integration.
+- 📦 Fully containerized with **Docker** for cross-platform use.
+
+---
+
+## ⚙️ Tech Stack
+
+| Tool/Library      | Purpose                                 |
+|-------------------|------------------------------------------|
+| **YOLOv5**         | Object detection framework               |
+| **Python**         | Core programming                        |
+| **PyTorch**        | Deep learning engine                     |
+| **NumPy**          | Matrix and array operations              |
+| **TensorBoard**    | Training monitoring                      |
+| **Seaborn**        | Data visualization                       |
+| **Flask**          | Backend REST API                         |
+| **Docker**         | Deployment and portability               |
+
+---
+
+## 📈 Model Metrics
+
+- **Precision**: ~0.89  
+- **Recall**: ~0.86  
+- **F1 Score**: ~0.87  
+- Trained using YOLOv5m variant over ~25 epochs  
+- Tracked with **TensorBoard**
+
+---
+
+## 🌐 API Usage
+
+**POST** `/predict`  
+Send an image (base64 or form-data) for classification.
+
+**Request:**
+```json
+{
+  "image": "base64_encoded_image"
+}
+```
+
+**Response:**
+```json
+{
+  "predictions": [
+    {
+      "label": "Plastic",
+      "confidence": 0.92,
+      "bbox": [x, y, width, height]
+    },
+    ...
+  ]
+}
+```
+
+---
+
+## 🚢 Running the Project
+
+### 🧪 Run Locally
+
+```bash
+git clone https://github.com/yourusername/inbin-w.git
+cd inbin-w
+pip install -r requirements.txt
+python app.py
+```
+
+### 🐳 Run with Docker
+
+```bash
+docker build -t inbin-w .
+docker run -p 5000:5000 inbin-w
+```
+
+---
+
+## 🌱 Real-World Applications
+
+- **Smart Bins** for public waste segregation  
+- **Industrial Recycling Plants** for automated sorting  
+- **Robotic Arms** in waste management facilities  
+- **Municipal Monitoring** systems  
+- **Sustainable Urban Infrastructure**
+
+---
+
+## 🌍 Why It Matters
+
+> InBin W aims to revolutionize waste segregation by automating the detection and classification of recyclables, reducing contamination, cutting costs, and promoting sustainable waste disposal.
+
+---
